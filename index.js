@@ -10,6 +10,8 @@ const bloodPressureRoutes = require("./routes/bloodPressure.route");
 const healthRoutes = require("./routes/health.route");
 const doctorRoutes = require("./routes/doctor.route");
 const userRoutes = require("./routes/user.route");
+const appointmentRoutes = require("./routes/appointment.route");
+const blogRoutes = require("./routes/blog.route")
 // App Config
 const app = express();
 //dotenv conffig
@@ -33,6 +35,8 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/doctors", doctorRoutes);
+app.use("/api/appoinment" , appointmentRoutes);
+app.use("/api/blog", blogRoutes);
 app.use("/api/health/bmi", bmiRoutes);
 app.use("/api/health/glucose", glucoseRoutes);
 app.use("/api/health/bloodPressure", bloodPressureRoutes);
